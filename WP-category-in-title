@@ -1,0 +1,7 @@
+<title>
+  <?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' –'; } ?>
+  <?php if(is_single()) { $cats = get_categories($cat_args);
+foreach( $cats as $cat ) { echo $cat->cat_name; echo ' - '; }
+} ?>
+	<?php bloginfo('name'); ?>
+</title>
